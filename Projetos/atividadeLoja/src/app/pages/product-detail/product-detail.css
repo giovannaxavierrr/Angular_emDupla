@@ -1,0 +1,35 @@
+.container {
+  
+  padding: 30px;
+  border-radius: 8px;
+  margin: auto;
+  text-align: center;
+  }
+
+.container img {
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.container h2 {
+  margin-bottom: 10px;
+}
+
+.container p {
+  margin-bottom: 10px;
+}
+
+.container button {
+  margin-top: 20px;
+  background-color: #1f1f1f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #444;
+}

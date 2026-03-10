@@ -1,0 +1,33 @@
+<app-container>
+
+  <div class="container">
+
+    @if (carregando) {
+    <p>Carregando produto...</p>
+    }
+
+    @if (erro) {
+    <p>Erro ao carregar produto.</p>
+    }
+
+    @if (!carregando && produto) {
+
+    <img [src]="produto.image">
+
+    <h2>{{ produto.title }}</h2>
+
+    <p>{{ produto.description }}</p>
+
+    <p><strong>Categoria:</strong> {{ produto.category }}</p>
+
+    <p><strong>Preço:</strong> R$ {{ produto.price }}</p>
+
+    <button routerLink="/products">
+      Voltar para produtos
+    </button>
+
+    }
+
+  </div>
+
+</app-container>

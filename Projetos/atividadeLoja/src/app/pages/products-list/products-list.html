@@ -1,0 +1,36 @@
+<app-container>
+  @if (carregando) {
+  <p>Carregando...</p>
+  }
+
+  @if (erro) {
+  <p>Erro ao carregar produtos.</p>
+  }
+
+  @if (!carregando && !erro) {
+
+  <h2>Produtos</h2>
+
+  <div class="lista-produtos">
+
+    @for (produto of produtos; track produto.id) {
+
+    <div class="produto">
+
+      <img [src]="produto.image" width="100">
+
+      <h3>{{ produto.title }}</h3>
+
+      <p>R$ {{ produto.price }}</p>
+
+      <button [routerLink]="['/products', produto.id]">
+        Ver detalhes
+      </button>
+
+    </div>
+
+    }
+  </div>
+
+  }
+</app-container>
